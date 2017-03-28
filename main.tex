@@ -1,0 +1,47 @@
+\documentclass[a4paper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[english,italian]{babel}
+\usepackage[colorlinks=true,allcolors={blue}]{hyperref} % Link
+\usepackage{emptypage} % Nasconde intestazione e piè nelle pagine bianche
+
+% Watermark
+\usepackage{draftwatermark}
+\SetWatermarkLightness{0.95}
+\SetWatermarkText{bozza}
+
+% Lista font a http://www.tug.dk/FontCatalogue
+\usepackage[default,osfigures,scale=0.95]{opensans}
+\usepackage[T1]{fontenc}
+
+\usepackage{./lib/thesiscover}
+
+% Parametri copertina (./lib/thesiscover.sty)
+\newcommand{\universita}{Università di Qualcosa}
+\newcommand{\dipartimento}{Qualcosa}
+\newcommand{\corso}{Qualcosa}
+\newcommand{\unilogopath}{./img/unilogo.png}
+\newcommand{\titolo}{Titolo}
+\newcommand{\sottotitolo}{Sottotitolo}
+\newcommand{\relatore}{Prof. Mario Rossi}
+\newcommand{\laureando}{Mario Rossi}
+\newcommand{\annoaccademico}{2016-2017}
+
+\begin{document}
+
+\frontmatter
+\thesiscover
+\include{./TeX_files/colophon}
+\tableofcontents
+\listoffigures
+\listoftables
+\include{./TeX_files/abstract}
+
+\mainmatter
+\include{./TeX_files/chapter01}
+\include{./TeX_files/chapter02}
+
+\backmatter
+% Acronimi, bibliografia, indice analitico, ecc.
+
+\end{document}

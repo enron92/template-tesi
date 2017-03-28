@@ -1,0 +1,38 @@
+\usepackage{graphicx}
+\usepackage{geometry}
+
+\newcommand{\thesiscover}{
+  \newgeometry{top=3cm,bottom=3cm,left=3.5cm,right=3.5cm}
+  {
+    \centering
+    {
+      \scshape
+      {\LARGE \universita\\}
+      {\Large Dipartimento di \dipartimento\\}
+      {\large Corso di laurea in \corso\\}
+    }
+    \vspace{3em}
+    \includegraphics[width=150px]{\unilogopath}\\
+    \vspace{7em}
+    {\huge\textbf{\titolo}\\}
+    \vspace{1em}
+    {\itshape\sottotitolo}
+    \vfill
+    {
+      \large
+      \raggedright
+      \textit{Relatore}\\
+      \relatore\\
+      \raggedleft
+      \textit{Laureando}\\
+      \laureando\\
+    }
+    \vspace{9em}
+    \centering
+    \hrule
+    \vspace{0.5em}
+    \scshape Anno Accademico \annoaccademico\\
+  }
+  \thispagestyle{empty}
+  \restoregeometry
+}
